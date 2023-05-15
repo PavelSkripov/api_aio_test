@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: api_aio_test
+    build: ./
+    ports:
+      - 8010:8010
+    depends_on:
+      - db
+    restart: always
+    volumes:
+      - .:/app
+
+  db:
+    container_name: api_aio_postgres
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=api_db
+      - POSTGRES_USER=api_user
+      - POSTGRES_PASSWORD=pass
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  postgres_data:
