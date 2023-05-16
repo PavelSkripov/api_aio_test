@@ -1,11 +1,11 @@
-version: '3.9'
+version: '3.8'
 
 services:
   app:
     container_name: api_aio_test
     build: ./
     ports:
-      - 8010:8010
+      - 8000:8000
     depends_on:
       - db
     restart: always
@@ -14,7 +14,7 @@ services:
 
   db:
     container_name: api_aio_postgres
-    image: postgres:14
+    image: postgres:14.8
     environment:
       - POSTGRES_DB=api_db
       - POSTGRES_USER=api_user

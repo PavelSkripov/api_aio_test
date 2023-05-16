@@ -60,4 +60,4 @@ if __name__ == "__main__":
     # эта строчка указывает, что данный файл можно запустить как скрипт
     setup_app(app)
     app.cleanup_ctx.append(pg_context)
-    web.run_app(app)  # запускаем приложение
+    web.run_app(app, port=8000)  # запускаем приложение

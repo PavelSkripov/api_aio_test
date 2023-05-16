@@ -9,12 +9,13 @@ SQlAlchemy >= 2.0 CORE
 ## Установка и запуск
 
 ```sh
-git clone https://github.com/PavelSkripov/api_aio_test.git
-cd api_aio_test
-make start
-make migrate
-make make migrate_up
-make create
+1. git clone https://github.com/PavelSkripov/api_aio_test.git
+2. cd api_aio_test
+3. make build
+4. make start
+5. make migrate
+6. make migrate_up
+7. make create
 
 ```
 В приложении создается admin пользователь с логином login и паролем pass
@@ -39,7 +40,7 @@ make create
 
 
 # Документация API
-
+Формат URL: http://0.0.0.0:8000/api/v1/users
 
 ### AUTH
 
